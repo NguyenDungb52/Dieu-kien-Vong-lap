@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+
+    <div id="root">
+
+    </div>
+
+    <script>
+        let array = [4,5,6,7,8,9,9,8]
+        function  interChangeSort(arr) {
+            let rong = [];
+
+            for(i = 0 ; i < arr.length; i++) {
+              for(j = i + 1; j < arr.length ; j++ ){
+                if(arr[j] > arr[i]){
+                  let t = arr[i]
+                  arr[i] = arr[j]
+                  arr[j] = t
+                }
+              }
+            }
+        
+            for(i = 0; i<arr.length;i++){
+              console.log(first)
+              if(rong.includes(arr[i]) == false){
+                 rong.push(arr[i])
+              }
+            }
+            console.log(rong)
+            document.write(rong[2])
+        }
+        interChangeSort(array)
+
+    </script>
+</body>
+
+</html>

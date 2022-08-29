@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>ten</th>
+                <th>tuoi</th>
+
+                <th>ten con</th>
+                <th>tuoi con</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+           
+        </tbody>
+    </table>
+    <script>
+   const book = {
+    title: 'Ego is the Enemy',
+    author: 'Ryan Holiday',
+    publisher: {
+        name: 'Penguin',
+        type: 'private'
+    }
+};
+
+const {title , author, name: {publisher: { name }} = book, type: {publisher: { type }} = book } = book;
+console.log(title)
+    </script>
+  </body>
+</html>

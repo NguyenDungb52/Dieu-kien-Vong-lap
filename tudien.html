@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+   <input type="number" name="" id="ok" placeholder="day nhap mang ">
+   <input type="number" id="oki" placeholder="day la ky tu de tim"/>
+   <p>mang truoc khi dao nguoc</p>
+   <p id="mang"></p>
+   <button onclick="push()">them phan tu vao manh</button>
+   <button onclick="search()">tim</button>
+   <p>sau khi dao nguoc</p>
+   <p id="in"></p>
+    <script>
+     var a = []
+        function push(){
+            var b = document.getElementById('ok').value
+            a = b.split("")
+            document.getElementById('mang').innerHTML = a
+        }
+        var count = 0
+        function search(){
+           
+            for(i=0;i<a.length;i++){
+                var d = document.getElementById('oki').value
+                if(a[i] == d){
+                    count++; 
+                }
+            }
+            console.log(count)
+            if(count > 0){
+                document.getElementById('in').innerHTML = count
+                count = 0
+            }
+            else if(count == 0){
+                document.getElementById('in').innerHTML = -1
+            }
+        }
+        
+    
+    </script>
+  </body>
+</html>
